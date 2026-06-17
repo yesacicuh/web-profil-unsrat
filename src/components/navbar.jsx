@@ -5,8 +5,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <nav className="bg-white/30 backdrop-blur-md border-b border-brand-muted/20 text-brand-navy p-5 sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center px-4">
+    // Mengubah bg-white/30 menjadi bg-blue-50/60 agar menyatu sempurna dengan background halaman
+    <nav className="bg-blue-50/60 backdrop-blur-md border-b border-brand-muted/20 text-brand-navy p-5 sticky top-0 z-50 transition-all duration-300">
+      <div className="container mx-auto flex justify-between items-center px-4 max-w-7xl">
         
         {/* LOGO */}
         <Link to="/" className="text-2xl font-bold tracking-widest hover:opacity-70 transition-opacity whitespace-nowrap">
@@ -42,7 +43,7 @@ export default function Navbar() {
 
       {/* MENU DROPDOWN - MOBILE */}
       {isOpen && (
-        <div className="md:hidden mt-4 flex flex-col space-y-4 text-sm uppercase tracking-widest font-semibold opacity-90 border-t border-brand-muted/10 pt-4">
+        <div className="md:hidden mt-4 flex flex-col space-y-4 text-sm uppercase tracking-widest font-semibold opacity-90 border-t border-brand-muted/10 pt-4 px-4">
           <Link to="/" onClick={() => setIsOpen(false)} className="hover:text-brand-muted transition duration-300">Beranda</Link>
           <Link to="/profil" onClick={() => setIsOpen(false)} className="hover:text-brand-muted transition duration-300">Profil & Visi Misi</Link>
           <Link to="/dosen" onClick={() => setIsOpen(false)} className="hover:text-brand-muted transition duration-300">Direktori Dosen</Link>

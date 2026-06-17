@@ -1,0 +1,170 @@
+{
+  "wajib": [
+    {
+      "semester": "Semester 1",
+      "mataKuliah": [
+        { "kode": "TIK1011", "nama": "Pendidikan Agama", "sks": 2 },
+        { "kode": "TIK1021", "nama": "Pancasila", "sks": 2 },
+        { "kode": "TIK1031", "nama": "Bahasa Indonesia", "sks": 2 },
+        { "kode": "TIK1041", "nama": "Kewarganegaraan", "sks": 2 },
+        { "kode": "TIK1051", "nama": "Matematika Diskrit", "sks": 3 },
+        { "kode": "TIK1061", "nama": "Kalkulus", "sks": 3 },
+        { "kode": "TIK1071", "nama": "Probabilitas dan Statistika", "sks": 2 },
+        { "kode": "TIK1081", "nama": "Algoritma dan Pemrograman Komputer", "sks": 4 },
+        { "kode": "TIK1091", "nama": "Prakt.Algoritma & Pemrograman Komputer", "sks": 1 }
+      ]
+    },
+    {
+      "semester": "Semester 2",
+      "mataKuliah": [
+        { "kode": "TIK1012", "nama": "Bahasa Inggris", "sks": 2 },
+        { "kode": "TIK1022", "nama": "Pengetahuan Kepasifikan", "sks": 2 },
+        { "kode": "TIK1032", "nama": "Pengantar Teknik Informatika", "sks": 2 },
+        { "kode": "TIK1042", "nama": "Aljabar Linier", "sks": 2 },
+        { "kode": "TIK1052", "nama": "Metode Numerik", "sks": 3 },
+        { "kode": "TIK1062", "nama": "Teori Bahasa dan Automata", "sks": 3 },
+        { "kode": "TIK1072", "nama": "Komputer dan Masyarakat", "sks": 2 },
+        { "kode": "TIK1082", "nama": "Basis Data", "sks": 3 },
+        { "kode": "TIK1092", "nama": "Praktikum Basis Data", "sks": 1 }
+      ]
+    },
+    {
+      "semester": "Semester 3",
+      "mataKuliah": [
+        { "kode": "TIK2011", "nama": "Sistem Informasi", "sks": 3 },
+        { "kode": "TIK2021", "nama": "Arsitektur dan Organisasi Komputer", "sks": 3 },
+        { "kode": "TIK2031", "nama": "Sistem Operasi", "sks": 3 },
+        { "kode": "TIK2041", "nama": "Struktur Data", "sks": 3 },
+        { "kode": "TIK2051", "nama": "Rekayasa Perangkat Lunak", "sks": 3 },
+        { "kode": "TIK2061", "nama": "Teknologi Basis Data", "sks": 3 },
+        { "kode": "TIK2071", "nama": "Praktikum Teknologi Basis data", "sks": 1 }
+      ]
+    },
+    {
+      "semester": "Semester 4",
+      "mataKuliah": [
+        { "kode": "TIK2012", "nama": "Interaksi Manusia Komputer", "sks": 4 },
+        { "kode": "TIK2022", "nama": "Kecerdasan Buatan", "sks": 2 },
+        { "kode": "TIK2032", "nama": "Pemrograman Web", "sks": 3 },
+        { "kode": "TIK2042", "nama": "Pemodelan dan Simulasi Komputer", "sks": 3 },
+        { "kode": "TIK2052", "nama": "Pengolahan Citra Digital", "sks": 3 },
+        { "kode": "TIK2062", "nama": "Jaringan dan Komunikasi Data", "sks": 3 },
+        { "kode": "TIK2072", "nama": "Praktikum Jaringan dan Komunikasi Data", "sks": 1 }
+      ]
+    },
+    {
+      "semester": "Semester 5",
+      "mataKuliah": [
+        { "kode": "TIK3011", "nama": "Pembelajaran Mesin", "sks": 3 },
+        { "kode": "TIK3021", "nama": "Pengembangan Game", "sks": 3 },
+        { "kode": "TIK3031", "nama": "Realitas Tertambah dan Realitas Maya", "sks": 3 },
+        { "kode": "TIK3041", "nama": "Komputasi Awan", "sks": 2 },
+        { "kode": "TIK3051", "nama": "Sistem Multimedia", "sks": 3 },
+        { "kode": "TIK3061", "nama": "Praktikum Sistem Multimedia", "sks": 1 },
+        { "kode": "TIK3XX1", "nama": "MKP Semester 5", "sks": 2 },
+        { "kode": "TIK3XX1", "nama": "MKP Semester 5", "sks": 2 }
+      ]
+    },
+    {
+      "semester": "Semester 6",
+      "mataKuliah": [
+        { "kode": "TIK3012", "nama": "Bioinformatika", "sks": 3 },
+        { "kode": "TIK3022", "nama": "Riset Informatika", "sks": 3 },
+        { "kode": "TIK3032", "nama": "Kewirausahaan", "sks": 2 },
+        { "kode": "TIK3042", "nama": "Topik Khusus Teknik Informatika", "sks": 2 },
+        { "kode": "TIK3052", "nama": "Kecakapan Antar Personal", "sks": 2 },
+        { "kode": "TIK3062", "nama": "Keamanan Siber", "sks": 3 },
+        { "kode": "TIK3072", "nama": "Praktikum Keamanan Siber", "sks": 1 },
+        { "kode": "TIK3XX2", "nama": "MKP Semester 6", "sks": 2 },
+        { "kode": "TIK3XX2", "nama": "MKP Semester 6", "sks": 2 }
+      ]
+    },
+    {
+      "semester": "Semester 7",
+      "mataKuliah": [
+        { "kode": "TIK4010", "nama": "KKT", "sks": 4 },
+        { "kode": "TIK4020", "nama": "MAGANG", "sks": 3 },
+        { "kode": "TIK4030", "nama": "Seminar dan Praktek Profesional", "sks": 3 },
+        { "kode": "TIK4041", "nama": "Grafika Komputer", "sks": 2 },
+        { "kode": "TIK4051", "nama": "Etika Profesi", "sks": 2 },
+        { "kode": "TIK4061", "nama": "Kriptografi", "sks": 2 },
+        { "kode": "TIK4XX1", "nama": "MKP Semester 7", "sks": 2 },
+        { "kode": "TIK4XX1", "nama": "MKP Semester 7", "sks": 2 }
+      ]
+    },
+    {
+      "semester": "Semester 8",
+      "mataKuliah": [
+        { "kode": "TIK4040", "nama": "SKRIPSI", "sks": 6 }
+      ]
+    }
+  ],
+  "pilihan": [
+    {
+      "peminatan": "Artificial Intelligence",
+      "mataKuliah": [
+        { "kode": "TIK3071", "nama": "Sistem Pendukung Pengambilan Keputusan", "sks": 2, "semester": "5" },
+        { "kode": "TIK3081", "nama": "Sistem Pakar", "sks": 2, "semester": "5" },
+        { "kode": "TIK3082", "nama": "Visi Komputer", "sks": 2, "semester": "6" },
+        { "kode": "TIK3092", "nama": "Jaringan Saraf Tiruan", "sks": 2, "semester": "6" },
+        { "kode": "TIK4041", "nama": "Algoritma Genetik", "sks": 2, "semester": "7" },
+        { "kode": "TIK4051", "nama": "Robotika Cerdas", "sks": 2, "semester": "7" }
+      ]
+    },
+    {
+      "peminatan": "Human Informatics",
+      "mataKuliah": [
+        { "kode": "TIK3091", "nama": "Desain Eksperimen", "sks": 2, "semester": "5" },
+        { "kode": "TIK3101", "nama": "Informatika Biomedis", "sks": 2, "semester": "5" },
+        { "kode": "TIK3102", "nama": "Teknologi Pembelajaran Daring", "sks": 2, "semester": "6" },
+        { "kode": "TIK3112", "nama": "Sistem Informasi Kesehatan", "sks": 2, "semester": "6" },
+        { "kode": "TIK4061", "nama": "E-Sport", "sks": 2, "semester": "7" },
+        { "kode": "TIK4071", "nama": "User Experience", "sks": 2, "semester": "7" }
+      ]
+    },
+    {
+      "peminatan": "Big Data",
+      "mataKuliah": [
+        { "kode": "TIK3111", "nama": "Manajemen Sistem Basis Data", "sks": 2, "semester": "5" },
+        { "kode": "TIK3121", "nama": "Representasi Pengetahuan", "sks": 2, "semester": "5" },
+        { "kode": "TIK3122", "nama": "Big Data", "sks": 2, "semester": "6" },
+        { "kode": "TIK3132", "nama": "Data Mining", "sks": 2, "semester": "6" },
+        { "kode": "TIK4081", "nama": "Information Retrieval", "sks": 2, "semester": "7" },
+        { "kode": "TIK4091", "nama": "Semantic Web", "sks": 2, "semester": "7" }
+      ]
+    },
+    {
+      "peminatan": "Information System",
+      "mataKuliah": [
+        { "kode": "TIK3131", "nama": "Teori Informasi", "sks": 2, "semester": "5" },
+        { "kode": "TIK3141", "nama": "Managemen Sistem Informasi Korporat", "sks": 2, "semester": "5" },
+        { "kode": "TIK3142", "nama": "E-Bisnis", "sks": 2, "semester": "6" },
+        { "kode": "TIK3152", "nama": "Sistem Informasi Geografis", "sks": 2, "semester": "6" },
+        { "kode": "TIK4101", "nama": "E-Government", "sks": 2, "semester": "7" },
+        { "kode": "TIK4111", "nama": "Audit Sistem Informasi", "sks": 2, "semester": "7" }
+      ]
+    },
+    {
+      "peminatan": "Distributed System",
+      "mataKuliah": [
+        { "kode": "TIK3151", "nama": "Teknik Perutean Jaringan", "sks": 2, "semester": "5" },
+        { "kode": "TIK3161", "nama": "Teknik Administrasi Server", "sks": 2, "semester": "5" },
+        { "kode": "TIK3162", "nama": "Pemrograman Jaringan", "sks": 2, "semester": "6" },
+        { "kode": "TIK3172", "nama": "Komunikasi Data Nirkabel", "sks": 2, "semester": "6" },
+        { "kode": "TIK4121", "nama": "Sistem Komunikasi Optik", "sks": 2, "semester": "7" },
+        { "kode": "TIK4131", "nama": "Teknik Simulasi Jaringan", "sks": 2, "semester": "7" }
+      ]
+    },
+    {
+      "peminatan": "Software Development",
+      "mataKuliah": [
+        { "kode": "TIK3171", "nama": "Pengembangan Aplikasi Mobile", "sks": 2, "semester": "5" },
+        { "kode": "TIK3181", "nama": "Aplikasi Berorientasi Service", "sks": 2, "semester": "5" },
+        { "kode": "TIK3182", "nama": "Pengembangan Aplikasi Desktop", "sks": 2, "semester": "6" },
+        { "kode": "TIK3192", "nama": "Pengembangan Aplikasi Web Berbasis Framework", "sks": 2, "semester": "6" },
+        { "kode": "TIK4141", "nama": "Manajemen Proyek Perangkat Lunak", "sks": 2, "semester": "7" },
+        { "kode": "TIK4151", "nama": "Kualitas Perangkat Lunak", "sks": 2, "semester": "7" }
+      ]
+    }
+  ]
+}
