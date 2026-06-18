@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import bgGedung from '../assets/gedung.jpeg'
 
+// --- KOMPONEN ANIMASI ANGKA ---
 function AnimasiAngka({ target }) {
   const [angka, setAngka] = useState(0)
 
@@ -28,10 +29,47 @@ function AnimasiAngka({ target }) {
 }
 
 export default function Home() {
+  
+  // Data Prestasi disesuaikan 100% dengan teks headline tanpa emotikon
+  const daftarPrestasi = [
+    {
+      judul: "Prestasi di Pilmapres LLDIKTI XVI 2026",
+      desc: (
+        <>
+          Mahasiswa Angkatan 2023, Clarissa Sheryl Natascha Maramis, meraih penghargaan <strong>Best Poster</strong> tingkat wilayah.
+        </>
+      )
+    },
+    {
+      judul: "Finalis PIMNAS 2024",
+      desc: (
+        <>
+          Tim mahasiswa Teknik Informatika berhasil menembus ajang Pekan Ilmiah Mahasiswa Nasional (PIMNAS) di Surabaya melalui inovasi <strong>Audio Therapy (PAX-MENTIS)</strong> untuk lansia.
+        </>
+      )
+    },
+    {
+      judul: "Publikasi Jurnal Scopus (2024)",
+      desc: (
+        <>
+          Mahasiswa berhasil mempublikasikan riset inovatif yang menggabungkan bidang <strong>Bioinformatika dan Machine Learning</strong> untuk analisis genotipe virus Hepatitis C.
+        </>
+      )
+    },
+    {
+      judul: "Sertifikasi Internasional AUN-QA",
+      desc: (
+        <>
+          Program Studi Teknik Informatika UNSRAT telah diakui kualitasnya secara internasional dengan mendapatkan <strong>sertifikasi ASEAN University Network-Quality Assurance (AUN-QA)</strong>.
+        </>
+      )
+    }
+  ];
+
   return (
-    <div className="flex flex-col w-full bg-blue-50/50">
+    <div className="flex flex-col w-full bg-blue-50/50 overflow-x-hidden">
       
-      {/* HERO SECTION */}
+      {/* ================= HERO SECTION DENGAN GAMBAR GEDUNG ================= */}
       <div className="relative w-full flex items-center pt-20 pb-32 md:pb-40 lg:pb-48">
         
         <div 
@@ -45,7 +83,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/40"></div>
         </div>
 
-        {/* Konten Utama */}
+        {/* Konten Utama Hero */}
         <div className="relative z-10 container mx-auto px-6 md:px-12 w-full flex flex-col items-start">
           <h2 className="text-sm md:text-base font-semibold tracking-[0.3em] uppercase text-brand-muted mb-4 flex items-center gap-3">
             <span className="w-8 h-[2px] bg-brand-muted"></span>
@@ -78,11 +116,11 @@ export default function Home() {
         </div>
       </div>
 
-      {/* STATISTIK SECTION */}
+      {/* ================= STATISTIK SECTION ================= */}
       <div className="relative z-20 container mx-auto px-4 -mt-16 md:-mt-24 mb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto">
           
-          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+          <div className="bg-white rounded-2xl p-8 shadow-[0_20px_40px_rgba(10,36,88,0.06)] border border-blue-50/50 hover:-translate-y-2 transition-transform duration-300">
             <p className="text-brand-navy/70 font-semibold tracking-wide text-sm mb-2">Mahasiswa Aktif</p>
             <h3 className="text-5xl font-extrabold text-brand-navy mb-3">
               <AnimasiAngka target={1085} />±
@@ -92,7 +130,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+          <div className="bg-white rounded-2xl p-8 shadow-[0_20px_40px_rgba(10,36,88,0.06)] border border-blue-50/50 hover:-translate-y-2 transition-transform duration-300">
             <p className="text-brand-navy/70 font-semibold tracking-wide text-sm mb-2">Laboratorium Riset</p>
             <h3 className="text-5xl font-extrabold text-brand-navy mb-3">
               <AnimasiAngka target={4} /> Labs
@@ -102,7 +140,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-100 hover:-translate-y-2 transition-transform duration-300">
+          <div className="bg-white rounded-2xl p-8 shadow-[0_20px_40px_rgba(10,36,88,0.06)] border border-blue-50/50 hover:-translate-y-2 transition-transform duration-300">
             <p className="text-brand-navy/70 font-semibold tracking-wide text-sm mb-2">Kemitraan Industri</p>
             <h3 className="text-5xl font-extrabold text-brand-navy mb-3">
               <AnimasiAngka target={10} />±
@@ -114,6 +152,52 @@ export default function Home() {
 
         </div>
       </div>
+
+      {/* ================= UNIVERSITAS SAM RATULANGI HEADLINE ================= */}
+      <section className="container mx-auto max-w-5xl px-6 mb-20 relative z-10">
+        <div className="bg-white rounded-[2rem] p-8 md:p-12 shadow-[0_15px_40px_rgba(10,36,88,0.04)] border border-blue-50 flex flex-col items-center text-center relative overflow-hidden">
+          
+          <div className="w-12 h-1 bg-brand-muted mb-6 rounded"></div>
+          
+          <h2 className="text-xs sm:text-sm font-bold tracking-[0.25em] uppercase text-brand-navy/60 mb-3">
+            Naungan Akademik
+          </h2>
+          
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-brand-navy mb-4 leading-tight">
+            Universitas Sam Ratulangi
+          </h3>
+          
+          <p className="text-brand-navy/70 text-xs sm:text-sm md:text-base max-w-3xl mx-auto leading-relaxed font-medium">
+            Sebagai salah satu perguruan tinggi negeri terkemuka di Indonesia Timur, Universitas Sam Ratulangi berkomitmen menyelenggarakan pendidikan yang unggul dan berbudaya. Di bawah naungan Fakultas Teknik, Program Studi Teknik Informatika terus melangkah maju menghasilkan lulusan yang adaptif terhadap akselerasi teknologi global.
+          </p>
+        </div>
+      </section>
+
+      {/* ================= PRESTASI & KEBANGGAAN SECTION ================= */}
+      <section className="container mx-auto max-w-5xl px-6 mb-24 relative z-10">
+        <div className="text-center mb-12">
+          <h2 className="text-sm font-bold tracking-[0.3em] uppercase text-brand-navy/60 mb-2">Rekam Jejak</h2>
+          <h3 className="text-3xl md:text-4xl font-extrabold text-brand-navy mb-4">Prestasi & Kebanggaan IT UNSRAT</h3>
+          <div className="w-16 h-1 bg-brand-muted mx-auto rounded"></div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {daftarPrestasi.map((item, index) => (
+            <div key={index} className="bg-white p-6 sm:p-8 rounded-3xl border border-blue-100 shadow-sm flex flex-col gap-4 hover:shadow-[0_15px_40px_rgba(10,36,88,0.06)] hover:-translate-y-1 transition-all duration-300 group">
+              
+              <div>
+                <div className="flex flex-col items-start gap-1 mb-2">
+                  <h4 className="text-lg font-extrabold text-brand-navy leading-snug">{item.judul}</h4>
+                </div>
+                <p className="text-sm text-brand-navy/70 leading-relaxed font-medium">
+                  {item.desc}
+                </p>
+              </div>
+
+            </div>
+          ))}
+        </div>
+      </section>
 
     </div>
   )

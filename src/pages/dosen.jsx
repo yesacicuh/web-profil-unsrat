@@ -55,7 +55,7 @@ export default function Dosen() {
             Akademik
           </h2>
           <h1 className="text-4xl md:text-5xl font-extrabold text-brand-navy tracking-tight">
-            Direktori Dosen
+            Dosen
           </h1>
           <div className="w-20 h-1.5 bg-gradient-to-r from-brand-navy to-brand-muted mt-5 rounded-full"></div>
         </div>
