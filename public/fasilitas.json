@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nama": "Peta Kampus",
+    "descSingkat": "Akses visual tata letak gedung dan ruang kelas di lingkungan kampus Teknik Informatika.",
+    "descLengkap": "Fasilitas Peta Kampus digital dirancang untuk membantu mahasiswa baru, tamu, maupun sivitas akademika dalam menavigasi area kampus. Peta ini mencakup lokasi presisi dari ruang kelas, laboratorium, ruang dosen, hingga fasilitas umum seperti toilet dan area parkir.\n\nDengan sistem pemetaan yang terstruktur, mobilitas di dalam area Fakultas Teknik menjadi lebih efisien dan terarah."
+  },
+  {
+    "id": 2,
+    "nama": "Ruang Kuliah",
+    "descSingkat": "Ruang perkuliahan luas dan nyaman, dilengkapi pendingin ruangan, televisi dan proyektor modern.",
+    "descLengkap": "Ruang kuliah utama merupakan pusat kegiatan belajar mengajar teoritis berskala besar. Ruangan ini didesain secara akustik untuk memastikan suara dosen terdengar jelas hingga ke sudut ruangan.\n\nFasilitas yang tersedia meliputi kursi ergonomis berstandar universitas, sistem pendingin ruangan (AC), proyektor, serta papan tulis untuk mendukung pembelajaran dan presentasi yang interaktif."
+  },
+  {
+    "id": 3,
+    "nama": "Laboratorium",
+    "descSingkat": "Lab komputer mutakhir dengan spesifikasi tinggi untuk menunjang praktikum dan riset.",
+    "descLengkap": "Program studi Teknik Informatika memiliki laboratorium yang dikelola oleh seorang kepala laboratorium, yaitu Kepala Laboratorium Teknik Informatika. Semua peralatan utama yang digunakan di laboratorium program studi ini dikelola oleh Laboratorium Teknik Informatika. Peralatan utama Laboratorium Teknik Informatika tersebar di empat ruang laboratorium:\n\n1. Ruang Laboratorium Teknologi Informasi dan Komunikasi\n2. Ruang Laboratorium Rekayasa Perangkat Lunak\n3. Ruang Laboratorium Teknologi Basis Data\n4. Ruang Laboratorium Multimedia dan Grafika Komputer."
+  },
+  {
+    "id": 4,
+    "nama": "Ruang Seminar / Pertemuan",
+    "descSingkat": "Fasilitas khusus untuk kegiatan seminar proposal, sidang skripsi, dan rapat akademik.",
+    "descLengkap": "Program Sarjana Teknik Informatika memiliki dua ruangan, masing-masing berkapasitas 25 orang, yang digunakan untuk seminar dan sidang disertasi sarjana. Kedua ruangan tersebut terletak di lantai tiga gedung Departemen Teknik Elektro, masing-masing berukuran 36m2. Tingkat pemanfaatan ruangan adalah 40 jam per minggu.\n\nSangat ideal digunakan untuk pelaksanaan ujian komprehensif, sidang skripsi tertutup, presentasi jurnal, maupun pertemuan strategis himpunan mahasiswa."
+  },
+  {
+    "id": 5,
+    "nama": "Perpustakaan",
+    "descSingkat": "Pusat literasi, e-book, dan jurnal internasional.",
+    "descLengkap": "Perpustakaan adalah jantung literasi Program Studi. Tempat ini tersedia komputer yang dapat digunakan oleh mahasiswa.\n\nAda juga area baca didesain tenang dan nyaman, dengan meja privat bagi mahasiswa yang membutuhkan tingkat konsentrasi tinggi saat menyusun tugas akhir."
+  },
+  {
+    "id": 6,
+    "nama": "Ruang Dosen",
+    "descSingkat": "Area kerja tenaga pengajar yang juga berfungsi sebagai ruang bimbingan mahasiswa.",
+    "descLengkap": "Ruang Dosen merupakan area administratif dan ruang kerja bagi seluruh tenaga pengajar Teknik Informatika. Ruangan ini difasilitasi dengan sekat kubikel modern untuk menjaga privasi dosen saat bekerja.\n\nMahasiswa dapat mengunjungi ruangan ini pada jam kerja yang telah ditentukan untuk melakukan sesi bimbingan akademik, konsultasi skripsi, maupun pengurusan tanda tangan dokumen resmi."
+  },
+  {
+    "id": 7,
+    "nama": "Sistem Informasi Terpadu",
+    "descSingkat": "Portal UNSRAT INSPIRE yang mengintegrasikan berbagai modul proses pembelajaran.",
+    "descLengkap": "SIT Universitas Sam Ratulangi memiliki beberapa modul yang mendukung proses pembelajaran. Modul-modul ini diintegrasikan oleh sebuah sistem yang disebut Portal UNSRAT INSPIRE ( https://inspire.unsrat.ac.id/login )."
+  },
+  {
+    "id": 8,
+    "nama": "Layanan Khusus",
+    "descSingkat": "Fasilitas inklusif yang memastikan kemudahan mobilitas bagi seluruh sivitas akademika.",
+    "descLengkap": "Program Studi berkomitmen penuh terhadap aksesibilitas kampus. Kami menyediakan berbagai penyesuaian fasilitas untuk memastikan kemudahan beraktivitas bagi siapa saja.\n\nFasilitas ini meliputi penyediaan jalur landai (ramp) di titik-titik eskalasi utama."
+  }
+]

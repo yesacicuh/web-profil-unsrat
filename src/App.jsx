@@ -5,6 +5,7 @@ import Home from './pages/home'
 import Profil from './pages/profile'
 import Dosen from './pages/dosen'
 import Akademik from './pages/akademik'
+import Fasilitas from './pages/fasilitas' // 🌟 Import halaman fasilitas baru
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/profil" element={<Profil />} />
             <Route path="/dosen" element={<Dosen />} />
             <Route path="/akademik" element={<Akademik />} />
+            <Route path="/fasilitas" element={<Fasilitas />} /> {/* 🌟 Tambahkan rute ini */}
           </Routes>
         </main>
 

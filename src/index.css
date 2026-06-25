@@ -4,6 +4,18 @@
   --color-brand-bg: #F5FEFF;
   --color-brand-navy: #0E2F76;
   --color-brand-muted: #AAC0E1;
+
+  /* --- PERBAIKAN ANIMASI UTK TAILWIND v4 --- */
+  --animate-shimmer: shimmer 0.50s ease-in-out;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-25deg);
+  }
+  100% {
+    transform: translateX(250%) skewX(-25deg);
+  }
 }
 
 body {

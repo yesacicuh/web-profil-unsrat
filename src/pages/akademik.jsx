@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, EffectCoverflow, Pagination, Mousewheel } from 'swiper/modules'
+import ScrollAnimate from '../components/ScrollAnimate' // 🌟 Panggil komponen dari file terpusat
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
@@ -80,7 +81,7 @@ export default function Akademik() {
     { 
       nama: "UPK", 
       judul: "UPK Kr. FT UNSRAT", 
-      desc: "Unit Pelayanan Kerohanian Kristen Fakultas Teknik Universitas Sam Ratulangi  adalah organisasi keagamaan kampus yang berfungsi sebagai wadah pembinaan mental, spiritual, dan pelayanan bagi seluruh mahasiswa aktif Kristen di Fakultas Teknik.", 
+      desc: "Unit Pelayanan Kerohanian Kristen Fakultas Teknik Universitas Sam Ratulangi adalah organisasi keagamaan kampus yang berfungsi sebagai wadah pembinaan mental, spiritual, dan pelayanan bagi seluruh mahasiswa aktif Kristen di Fakultas Teknik.", 
       logo: logoUpk 
     },
     { 
@@ -205,109 +206,125 @@ export default function Akademik() {
 
       <div className="container mx-auto px-4 sm:px-6 py-12 sm:py-16 max-w-5xl">
         
-        {/* HEADER */}
-        <div className="mb-10 text-left">
-          <h2 className="text-xs sm:text-sm font-bold tracking-[0.3em] uppercase text-brand-navy/60 mb-2">Informasi Studi</h2>
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-navy mb-4 leading-tight">Akademik & Organisasi</h1>
-          <div className="w-20 h-1.5 bg-gradient-to-r from-brand-navy to-brand-muted mt-5 rounded-full"></div>
-        </div>
-
-        {/* TABS */}
-        <div className="flex justify-center mb-12">
-          <div className="bg-white p-1.5 rounded-2xl shadow-sm border border-blue-100 flex gap-2 overflow-x-auto max-w-full no-scrollbar">
-            <button onClick={() => setActiveTab('wajib')} className={`px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${activeTab === 'wajib' ? 'bg-brand-navy text-white shadow-md' : 'text-brand-navy/60'}`}>Mata Kuliah Wajib</button>
-            <button onClick={() => setActiveTab('pilihan')} className={`px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${activeTab === 'pilihan' ? 'bg-brand-navy text-white shadow-md' : 'text-brand-navy/60'}`}>Paket Peminatan</button>
+        {/* ================= 1. HEADER (SUDAH DI TENGAH) ================= */}
+        <ScrollAnimate>
+          <div className="mb-10 text-center">
+            <h2 className="text-xs sm:text-sm font-bold tracking-[0.3em] uppercase text-brand-navy/60 mb-2">Informasi Studi</h2>
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-brand-navy mb-4 leading-tight">Akademik & Organisasi</h1>
+            <div className="w-20 h-1.5 bg-gradient-to-r from-brand-navy to-brand-muted mt-5 mx-auto rounded-full"></div>
           </div>
-        </div>
+        </ScrollAnimate>
 
-        {/* KURIKULUM */}
+        {/* ================= 2. NAVIGASI TABS ================= */}
+        <ScrollAnimate delay="md:delay-[100ms]">
+          <div className="flex justify-center mb-12">
+            <div className="bg-white p-1.5 rounded-2xl shadow-sm border border-blue-100 flex gap-2 overflow-x-auto max-w-full no-scrollbar">
+              <button onClick={() => setActiveTab('wajib')} className={`px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${activeTab === 'wajib' ? 'bg-brand-navy text-white shadow-md' : 'text-brand-navy/60'}`}>Mata Kuliah Wajib</button>
+              <button onClick={() => setActiveTab('pilihan')} className={`px-4 sm:px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition-all whitespace-nowrap ${activeTab === 'pilihan' ? 'bg-brand-navy text-white shadow-md' : 'text-brand-navy/60'}`}>Paket Peminatan</button>
+            </div>
+          </div>
+        </ScrollAnimate>
+
+        {/* ================= 3. SEKSI KURIKULUM ================= */}
         <section className="mb-24 sm:mb-32 max-w-4xl mx-auto">
           {activeTab === 'wajib' ? (
             <div className="w-full">
-              {kurikulumData.wajib?.map((item, index) => <AccordionItem key={index} title={item.semester} courses={item.mataKuliah} isOpen={openSemester === item.semester} onClick={() => setOpenSemester(openSemester === item.semester ? null : item.semester)} />)}
+              {kurikulumData.wajib?.map((item, index) => (
+                <ScrollAnimate key={index} delay={index % 2 === 0 ? 'delay-0' : 'md:delay-[50ms]'}>
+                  <AccordionItem 
+                    title={item.semester} 
+                    courses={item.mataKuliah} 
+                    isOpen={openSemester === item.semester} 
+                    onClick={() => setOpenSemester(openSemester === item.semester ? null : item.semester)} 
+                  />
+                </ScrollAnimate>
+              ))}
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
               {kurikulumData.pilihan?.map((paket, idx) => (
-                <div key={idx} className="bg-white p-5 sm:p-6 rounded-3xl border border-blue-100 shadow-sm flex flex-col h-full hover:shadow-md transition-all">
-                  <div className="border-b border-blue-50 pb-4 mb-4">
-                    <span className="text-[10px] font-bold bg-blue-50 text-brand-navy px-2.5 py-1 rounded-md uppercase tracking-wider">Paket Pilihan</span>
-                    <h4 className="text-lg font-extrabold text-brand-navy mt-2">{paket.peminatan}</h4>
-                  </div>
-                  <ul className="divide-y divide-blue-50/30 text-xs sm:text-sm font-medium text-brand-navy/80 flex-grow">
-                    {paket.mataKuliah?.map((mk, mIdx) => (
-                      <div key={mIdx} className="py-3 flex justify-between items-start gap-4">
-                        <div>
-                          <p className="font-semibold text-brand-navy leading-snug">{mk.nama}</p>
-                          <span className="text-[10px] sm:text-[11px] font-mono text-brand-muted mt-1 inline-block">{mk.kode} • Semester {mk.semester}</span>
+                <ScrollAnimate key={idx} delay={idx % 2 === 0 ? 'delay-0' : 'md:delay-[100ms]'}>
+                  <div className="bg-white p-5 sm:p-6 rounded-3xl border border-blue-100 shadow-sm flex flex-col h-full hover:shadow-md transition-all">
+                    <div className="border-b border-blue-50 pb-4 mb-4">
+                      <span className="text-[10px] font-bold bg-blue-50 text-brand-navy px-2.5 py-1 rounded-md uppercase tracking-wider">Paket Pilihan</span>
+                      <h4 className="text-lg font-extrabold text-brand-navy mt-2">{paket.peminatan}</h4>
+                    </div>
+                    <ul className="divide-y divide-blue-50/30 text-xs sm:text-sm font-medium text-brand-navy/80 flex-grow">
+                      {paket.mataKuliah?.map((mk, mIdx) => (
+                        <div key={mIdx} className="py-3 flex justify-between items-start gap-4">
+                          <div>
+                            <p className="font-semibold text-brand-navy leading-snug">{mk.nama}</p>
+                            <span className="text-[10px] sm:text-[11px] font-mono text-brand-muted mt-1 inline-block">{mk.kode} • Semester {mk.semester}</span>
+                          </div>
+                          <span className="bg-blue-50 text-brand-navy px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold whitespace-nowrap">{mk.sks} SKS</span>
                         </div>
-                        <span className="bg-blue-50 text-brand-navy px-2 py-0.5 rounded-md text-[10px] sm:text-xs font-bold whitespace-nowrap">{mk.sks} SKS</span>
-                      </div>
-                    ))}
-                  </ul>
-                </div>
+                      ))}
+                    </ul>
+                  </div>
+                </ScrollAnimate>
               ))}
             </div>
           )}
         </section>
 
-        {/* SECTION CAROUSEL ORGANISASI */}
-        <section className="max-w-5xl mx-auto relative pt-6 pb-10">
+        {/* ================= 4. SEKSI CAROUSEL ORGANISASI ================= */}
+        <ScrollAnimate delay="md:delay-[150ms]">
+          <section className="max-w-5xl mx-auto relative pt-6 pb-10">
 
-          <div className="org-swiper-wrapper z-10">
-            <Swiper
-              effect={'coverflow'}
-              grabCursor={true}
-              centeredSlides={true}
-              slidesPerView={'auto'}
-              loop={false} 
-              slideToClickedSlide={true} 
-              mousewheel={{ forceToAxis: true }} 
-              coverflowEffect={{
-                rotate: 0,
-                stretch: 50,     
-                depth: 200,      
-                modifier: 1.2,     
-                slideShadows: false, 
-              }}
-              pagination={{ clickable: true }} 
-              modules={[EffectCoverflow, Pagination, Mousewheel, Autoplay]}
-              // MENGGUNAKAN onActiveIndexChange AGAR PERUBAHAN TEKS TERJADI SEKETIKA SAAT DIKLIK/DIGESER
-              onActiveIndexChange={(swiper) => setActiveOrgIndex(swiper.activeIndex)}
-              className="org-swiper"
-            >
-              {daftarOrganisasi.map((org, index) => (
-                <SwiperSlide key={index}>
-                  <div className="org-card w-full h-full bg-white rounded-[24px] sm:rounded-[32px] shadow-[0_10px_30px_rgba(10,36,88,0.04)] border border-blue-50/50 flex items-center justify-center p-6 sm:p-8 transition-all duration-500">
-                    <img 
-                      src={org.logo} 
-                      alt={org.nama} 
-                      className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 object-contain mix-blend-multiply contrast-125 brightness-105" 
-                    />
-                  </div>
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-
-          {/* TEKS INFO DI BAWAH GAMBAR DENGAN ANIMASI FADE-IN BARU (MENGGUNAKAN KEY={ACTIVEORGINDEX}) */}
-          <div key={activeOrgIndex} className="animate-text-reveal text-center mt-6 px-2 sm:px-4 relative z-10">
-            <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2">
-              <div className="h-[2px] w-8 sm:w-12 bg-brand-navy/20"></div>
-              <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-navy">
-                {daftarOrganisasi[activeOrgIndex]?.judul}
-              </h3>
-              <div className="h-[2px] w-8 sm:w-12 bg-brand-navy/20"></div>
+            <div className="org-swiper-wrapper z-10">
+              <Swiper
+                effect={'coverflow'}
+                grabCursor={true}
+                centeredSlides={true}
+                slidesPerView={'auto'}
+                loop={false} 
+                slideToClickedSlide={true} 
+                mousewheel={{ forceToAxis: true }} 
+                coverflowEffect={{
+                  rotate: 0,
+                  stretch: 50,     
+                  depth: 200,      
+                  modifier: 1.2,     
+                  slideShadows: false, 
+                }}
+                pagination={{ clickable: true }} 
+                modules={[EffectCoverflow, Pagination, Mousewheel, Autoplay]}
+                onActiveIndexChange={(swiper) => setActiveOrgIndex(swiper.activeIndex)}
+                className="org-swiper"
+              >
+                {daftarOrganisasi.map((org, index) => (
+                  <SwiperSlide key={index}>
+                    <div className="org-card w-full h-full bg-white rounded-[24px] sm:rounded-[32px] shadow-[0_10px_30px_rgba(10,36,88,0.04)] border border-blue-50/50 flex items-center justify-center p-6 sm:p-8 transition-all duration-500">
+                      <img 
+                        src={org.logo} 
+                        alt={org.nama} 
+                        className="w-28 h-28 sm:w-32 sm:h-32 md:w-44 md:h-44 object-contain mix-blend-multiply contrast-125 brightness-105" 
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
             </div>
-            <p className="text-brand-muted uppercase tracking-[0.2em] text-xs sm:text-sm font-bold mb-4">
-              {daftarOrganisasi[activeOrgIndex]?.nama}
-            </p>
-            <p className="text-brand-navy/70 max-w-xl mx-auto text-xs sm:text-sm leading-relaxed font-medium min-h-[60px]">
-              {daftarOrganisasi[activeOrgIndex]?.desc}
-            </p>
-          </div>
 
-        </section>
+            {/* TEKS INFO DI BAWAH GAMBAR DENGAN ANIMASI REVEAL */}
+            <div key={activeOrgIndex} className="animate-text-reveal text-center mt-6 px-2 sm:px-4 relative z-10">
+              <div className="flex items-center justify-center gap-3 sm:gap-4 mb-2">
+                <div className="h-[2px] w-8 sm:w-12 bg-brand-navy/20"></div>
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-extrabold text-brand-navy">
+                  {daftarOrganisasi[activeOrgIndex]?.judul}
+                </h3>
+                <div className="h-[2px] w-8 sm:w-12 bg-brand-navy/20"></div>
+              </div>
+              <p className="text-brand-muted uppercase tracking-[0.2em] text-xs sm:text-sm font-bold mb-4">
+                {daftarOrganisasi[activeOrgIndex]?.nama}
+              </p>
+              <p className="text-brand-navy/70 max-w-xl mx-auto text-xs sm:text-sm leading-relaxed font-medium min-h-[60px]">
+                {daftarOrganisasi[activeOrgIndex]?.desc}
+              </p>
+            </div>
+
+          </section>
+        </ScrollAnimate>
 
       </div>
     </div>
